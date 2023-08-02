@@ -1,0 +1,16 @@
+name = "multi-module-test-as"
+version = "1.0.0"
+
+[deployment]
+permissions = []
+nodes = 1
+
+[build]
+dir = "build"
+entry = "multi-module-test-as_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "multi-module-test-as.wasm"
+command = "npm run build:release"

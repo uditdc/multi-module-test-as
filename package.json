@@ -1,0 +1,21 @@
+{
+  "name": "multi-module-test-as",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "APACHE-2.0",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build:release": "npm run clean; asc assembly/index.ts --target release",
+    "build:debug": "npm run clean; asc assembly/index.ts --target debug"
+  },
+  "dependencies": {
+    "@blockless/sdk": "^1.1.0",
+    "as-wasi": "^0.6.0"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.25.0",
+    "@assemblyscript/wasi-shim": "^0.1.0",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "typescript": "^5.1.3"
+  }
+}
