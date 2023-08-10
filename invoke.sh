@@ -4,7 +4,7 @@
 currentDir=$(pwd)
 
 # Define the variables
-runtimePath="$HOME/.bls/runtime/blockless-cli"
+runtimePath="$HOME/.bls/runtime/bls-runtime"
 manifestPath="$currentDir/build/manifest.json"
 
 # Execute the command and capture the output

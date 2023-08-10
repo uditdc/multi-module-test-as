@@ -6,8 +6,8 @@ currentDir=$(pwd)
 rm -rf build
 
 # Run the asc command with the specified options
-asc assembly/index.ts --target release -o build/index.wasm --optimize
-asc assembly/modules/moda.ts --target release -o build/moda.wasm --exportStart _initialize --optimize
+asc assembly/index.ts --target release -o build/index.wasm --optimize --enable threads --sharedMemory --maximumMemory 2 --exportRuntime
+asc assembly/modules/moda.ts --target release -o build/moda.wasm --exportStart _initialize --optimize --enable threads --sharedMemory --maximumMemory 2 --exportRuntime
 
 # Function to calculate MD5 hash
 calculate_md5() {
